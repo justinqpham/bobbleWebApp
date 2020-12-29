@@ -66,7 +66,7 @@ const Welcome = () => {
   return (
     <StyledPageRoot>
       <StyledLogoDiv>
-        <img src={BobbleSportsLogo} alt="Bubble Sports Logo" />
+        <img src={BobbleSportsLogo} alt="Bobble Sports Logo" />
       </StyledLogoDiv>
       <StyledSoundSpan>Turn on sound!</StyledSoundSpan>
       <StyledExplainationText>
