@@ -2,11 +2,12 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import Welcome from "./Components/Welcome";
+import Buttons from "./Components/Buttons";
 
-export const Routes = () => (
+const Routes = () => (
   <>
     <Route exact path="/" render={Welcome} />
-    <Route exact path="/board" />
+    <Route exact path="/board" render={Buttons} />
   </>
 );
 

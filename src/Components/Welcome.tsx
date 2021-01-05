@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-// @ts-ignore
-import BobbleSportsLogo from "../Static/bobblesportslogo.png";
-// @ts-ignore
-import EnterButtonImage from "../Static/enterbutton.png";
+import bobbleLogo from "../Static/bobblesportslogo.png"
+
+import enterButtonImage from "../Static/enterbutton.png"
+
 
 const StyledPageRoot = styled.div`
   background-color: rgb(198, 13, 13);
@@ -66,7 +66,7 @@ const Welcome = () => {
   return (
     <StyledPageRoot>
       <StyledLogoDiv>
-        <img src={BobbleSportsLogo} alt="Bobble Sports Logo" />
+        <img src={bobbleLogo} alt="Bobble Sports Logo" />
       </StyledLogoDiv>
       <StyledSoundSpan>Turn on sound!</StyledSoundSpan>
       <StyledExplainationText>
@@ -77,7 +77,7 @@ const Welcome = () => {
         Tap buttons faster for a more intense reaction!
       </StyledTapFaster>
       <StyledClapDiv whileTap={{ scale: 0.8 }}>
-        <img src={EnterButtonImage} alt="Clap" />
+        <img src={enterButtonImage} alt="Clap" />
       </StyledClapDiv>
       <TOSDiv>
         <StyledA target="_blank" rel="noreferrer" href="https://google.com">
