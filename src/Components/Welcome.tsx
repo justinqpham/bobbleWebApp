@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { withRouter } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 import bobbleLogo from "../Static/bobblesportslogo.png"
 
@@ -63,6 +65,7 @@ const StyledA = styled.a`
 `;
 
 const Welcome = () => {
+  const history = useHistory();
   return (
     <StyledPageRoot>
       <StyledLogoDiv>
@@ -76,8 +79,8 @@ const Welcome = () => {
       <StyledTapFaster>
         Tap buttons faster for a more intense reaction!
       </StyledTapFaster>
-      <StyledClapDiv whileTap={{ scale: 0.8 }}>
-        <img src={enterButtonImage} alt="Clap" />
+      <StyledClapDiv whileTap={{ scale: 0.8 }} onClick={() => history.push('/board')}>
+        <img src={enterButtonImage} alt="Clap" /> 
       </StyledClapDiv>
       <TOSDiv>
         <StyledA target="_blank" rel="noreferrer" href="https://google.com">
@@ -92,4 +95,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default withRouter(Welcome);
