@@ -6,6 +6,9 @@ import backButton from '../Static/backbutton.png';
 import leoneslogo from '../Static/leoneslogo.png';
 import tigresligo from '../Static/tigresligo.png';
 import liveicon from '../Static/liveicon.png';
+import boobutton from '../Static/boobutton.png';
+import cheerbutton from '..Static/cheerbutton.png';
+import presidentelogo from '..Statis/presidentelogo.png';
 import { withRouter } from 'react-router';
 import { useHistory } from 'react-router-dom';
 
@@ -31,6 +34,14 @@ const StyledFirstRowDiv = styled.div`
   margin-right: 1.2rem;
 `;
 
+const StyledButtonBoardFirstRowDiv = styled.div`
+  height: 100%;
+  width: 100;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid black;
+`;
+
 const BackArrowButton = styled.div`
   display: flex;
   align-items: center;
@@ -44,6 +55,7 @@ const ParentDiv = styled.div`
   margin-top: 2rem;
   display: flex;
   justify-content: center;
+  border: 2px solid black;
 `;
 
 const TeamBox = styled.div`
@@ -58,6 +70,16 @@ const TeamBox = styled.div`
   height: 200px;
 `;
 
+
+const booButton = styled.div`
+  flex: 1;
+`;
+
+const cheerButton = styled.div`
+  flex: 1;
+`;
+
+
 const LeonesLogo = styled.div`
   margin-top: 10px;
   flex: 1;
@@ -66,6 +88,10 @@ const LiveLogo = styled.div`
   flex: 1;
 `;
 const TigresLogo = styled.div`
+  flex: 1;
+`;
+
+const PresidenteLogo = styled.div`
   flex: 1;
 `;
 
@@ -117,6 +143,9 @@ const Buttons = () => {
           </TigresLogo>
         </TeamBox>
       </ParentDiv>
+      <presidenteLogo>
+        <img src={presidentelogo} alt="Presidente Logo" />
+      </presidenteLogo>
     </StyledPageRoot>
   );
 };
