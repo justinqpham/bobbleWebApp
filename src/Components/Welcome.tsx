@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { withRouter } from 'react-router';
 import { useHistory } from 'react-router-dom';
 
-import bobbleLogo from "../Static/bobblesportslogo.png"
+import bobbleLogo from "../Static/bobbleSportsLogo.png"
 
-import enterButtonImage from "../Static/enterbutton.png"
+import enterButtonImage from "../Static/enterButton.png"
 
 
 const StyledPageRoot = styled.div`
