@@ -1,45 +1,45 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from "framer-motion";
+// import StyledPageRoot from 
 
-import lidomLogo from '../Static/lidomlogo.png';
-import backButton from '../Static/backbutton.png';
-import leoneslogo from '../Static/leoneslogo.png';
-import tigresligo from '../Static/tigresligo.png';
-import liveicon from '../Static/liveicon.png';
-import boobutton from '../Static/boobutton.png';
-import cheerbutton from '..Static/cheerbutton.png';
-import presidentelogo from '..Statis/presidentelogo.png';
+
+import lidomLogo from '../Static/lidomLogo.png';
+import backButton from '../Static/backButton.png';
+import leonesLogo from '../Static/leonesLogo.png';
+import tigresLigo from '../Static/tigresLigo.png';
+import liveIcon from '../Static/liveIcon.png';
+import presidenteLogo from '../Static/presidenteLogo.png';
+import booButton from '../Static/booButton.png';
+import cheerButton from '../Static/cheerButton.png';
+import letdownButton from '../Static/letdownButton.png';
+import letsgoButton from '../Static/letsgoButton.png';
+import clapButton from '../Static/clapButton.png';
+
 import { withRouter } from 'react-router';
 import { useHistory } from 'react-router-dom';
+import StyledPageRoot from './StyledPageRoot';
+import StyledFirstRowDiv from './StyledFirstRowDiv';
 
-const StyledPageRoot = styled.div`
-  background-color: rgb(244, 244, 244);
-  overflow: hidden;
+
+
+const ButtonDiv = styled(motion.img)`
+  height: 90%;
+  width: 50%;
+`;
+
+
+const PresidenteLogo = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 0 10px;
-  color: #fff;
-  text-align: center;
-  font-family: 'Montserrat';
-  height: 926px;
-  width: 428px;
+  margin-top: 2rem;
 `;
 
-const StyledFirstRowDiv = styled.div`
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: flex-start;
-  margin-right: 1.2rem;
-`;
-
-const StyledButtonBoardFirstRowDiv = styled.div`
+const ButtonBoardFirstRowDiv = styled.div`
   height: 100%;
   width: 100;
   align-items: center;
   justify-content: flex-start;
-  border: 2px solid black;
 `;
 
 const BackArrowButton = styled.div`
@@ -48,6 +48,7 @@ const BackArrowButton = styled.div`
   justify-content: flex-start;
   height: 100%;
   cursor: pointer;
+  margin-left: 1rem;
 `;
 
 const ParentDiv = styled.div`
@@ -55,9 +56,15 @@ const ParentDiv = styled.div`
   margin-top: 2rem;
   display: flex;
   justify-content: center;
-  border: 2px solid black;
 `;
 
+const ButtonBoardDiv = styled.div`
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
 const TeamBox = styled.div`
   display: flex;
   justify-content: space-between;
@@ -70,28 +77,11 @@ const TeamBox = styled.div`
   height: 200px;
 `;
 
-
-const booButton = styled.div`
-  flex: 1;
-`;
-
-const cheerButton = styled.div`
-  flex: 1;
-`;
-
-
 const LeonesLogo = styled.div`
   margin-top: 10px;
   flex: 1;
 `;
-const LiveLogo = styled.div`
-  flex: 1;
-`;
-const TigresLogo = styled.div`
-  flex: 1;
-`;
-
-const PresidenteLogo = styled.div`
+const LogoDiv = styled.div`
   flex: 1;
 `;
 
@@ -111,7 +101,7 @@ const Buttons = () => {
       <ParentDiv>
         <TeamBox>
           <LeonesLogo>
-            <img src={leoneslogo} alt="Back Button" />
+            <img src={leonesLogo} alt="Back Button" />
             <p
               style={{
                 color: '#000',
@@ -124,11 +114,11 @@ const Buttons = () => {
               Leones del Escogido
             </p>
           </LeonesLogo>
-          <LiveLogo>
-            <img src={liveicon} alt="Back Button" />
-          </LiveLogo>
-          <TigresLogo>
-            <img src={tigresligo} alt="Back Button" />
+          <LogoDiv>
+            <img src={liveIcon} alt="Live Icon" />
+          </LogoDiv>
+          <LogoDiv>
+            <img src={tigresLigo} alt="Tigres Logo" />
             <p
               style={{
                 color: '#000',
@@ -140,12 +130,27 @@ const Buttons = () => {
             >
               Tigres del Licey
             </p>
-          </TigresLogo>
+          </LogoDiv>
         </TeamBox>
       </ParentDiv>
-      <presidenteLogo>
-        <img src={presidentelogo} alt="Presidente Logo" />
-      </presidenteLogo>
+        <ParentDiv>
+          <PresidenteLogo>
+            <img src={presidenteLogo} alt="Budweiser Logo" />
+          </PresidenteLogo>
+        </ParentDiv>
+        <ButtonBoardDiv>
+          <ButtonBoardFirstRowDiv> 
+            <ButtonDiv src={booButton} alt="Boo Button" whileTap={{ scale: 0.8 }}/>
+            <ButtonDiv src={cheerButton} alt="Boo Button" whileTap={{ scale: 0.8 }}/>
+          </ButtonBoardFirstRowDiv>
+          <ButtonBoardFirstRowDiv> 
+            <ButtonDiv src={letdownButton} alt="Boo Button" whileTap={{ scale: 0.8 }}/>
+            <ButtonDiv src={letsgoButton} alt="Boo Button" whileTap={{ scale: 0.8 }}/>
+          </ButtonBoardFirstRowDiv><ButtonBoardFirstRowDiv> 
+            <ButtonDiv src={clapButton} alt="Boo Button" style={{width: "70%"}} whileTap={{ scale: 0.8 }}/>
+            
+          </ButtonBoardFirstRowDiv>
+        </ButtonBoardDiv>
     </StyledPageRoot>
   );
 };
