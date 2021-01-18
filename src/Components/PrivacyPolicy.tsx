@@ -22,6 +22,7 @@ const StyledExplainationText = styled.p`
   font-size: 15px;
   font-weight: lighter;
   margin-top: 109px;
+  
 `;
 
 
