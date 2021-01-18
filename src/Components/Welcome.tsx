@@ -5,8 +5,11 @@ import { withRouter } from 'react-router';
 import { useHistory } from 'react-router-dom';
 
 import bobbleLogo from "../Static/bobbleSportsLogo.png"
+import bobbleLogoLarge from "../Static/bobbleSportsLogoLarge.png"
 
 import enterButtonImage from "../Static/enterButton.png"
+import enterButtonLarge from "../Static/enterButtonLarge.png"
+
 
 
 const StyledPageRoot = styled.div`
@@ -83,7 +86,7 @@ const Welcome = () => {
         <img src={enterButtonImage} alt="Clap" /> 
       </StyledClapDiv>
       <TOSDiv>
-        <StyledA target="_blank" rel="noreferrer" href="https://google.com">
+        <StyledA onClick={() => history.push('/privacy')}>
           Privacy Policy
         </StyledA>{" "}
         |{" "}
