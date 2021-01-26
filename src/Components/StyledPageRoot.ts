@@ -11,8 +11,9 @@ const StyledPageRoot = styled.div`
   color: #fff;
   text-align: center;
   font-family: 'Montserrat';
-  height: 926px;
+  height: 886px;
   width: 428px;
+  border-radius: 20px;
 
   @media ${device.laptop} { 
     max-width: 800px;
