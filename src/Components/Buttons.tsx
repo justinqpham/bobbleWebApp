@@ -86,92 +86,94 @@ const Buttons = () => {
   const history = useHistory();
 
   return (
-    <PhoneFrame>
-      <StyledPageRoot>
-        <ParentDiv>
-          <BackArrowButton onClick={() => history.push("/")}>
-            <img src={backButton} alt="Back Button" />
-          </BackArrowButton>
-          <StyledFirstRowDiv>
-            <img src={lidomLogo} alt="Lidom Logo" />
-          </StyledFirstRowDiv>
-        </ParentDiv>
-        <ParentDiv>
-          <TeamBox>
-            <LeonesLogo>
-              <img src={leonesLogo} alt="Back Button" />
-              <p
-                style={{
-                  color: "#000",
-                  fontFamily: "Montserrat",
-                  fontWeight: "bold",
-                  margin: "0",
-                  marginTop: "20px",
-                }}
-              >
-                Leones del Escogido
-              </p>
-            </LeonesLogo>
-            <LogoDiv>
-              <img src={liveIcon} alt="Live Icon" />
-            </LogoDiv>
-            <LogoDiv>
-              <img src={tigresLigo} alt="Tigres Logo" />
-              <p
-                style={{
-                  color: "#000",
-                  fontFamily: "Montserrat",
-                  fontWeight: "bold",
-                  margin: "0",
-                  marginTop: "20px",
-                }}
-              >
-                Tigres del Licey
-              </p>
-            </LogoDiv>
-          </TeamBox>
-        </ParentDiv>
-        <ParentDiv>
-          <PresidenteLogo>
-            <img src={presidenteLogo} alt="Budweiser Logo" />
-          </PresidenteLogo>
-        </ParentDiv>
-        <ButtonBoardDiv>
-          <ButtonBoardFirstRowDiv>
-            <ButtonDiv
-              src={booButton}
-              alt="Boo Button"
-              whileTap={{ scale: 0.8 }}
-            />
-            <ButtonDiv
-              src={cheerButton}
-              alt="Boo Button"
-              whileTap={{ scale: 0.8 }}
-            />
-          </ButtonBoardFirstRowDiv>
-          <ButtonBoardFirstRowDiv>
-            <ButtonDiv
-              src={letdownButton}
-              alt="Boo Button"
-              whileTap={{ scale: 0.8 }}
-            />
-            <ButtonDiv
-              src={letsgoButton}
-              alt="Boo Button"
-              whileTap={{ scale: 0.8 }}
-            />
-          </ButtonBoardFirstRowDiv>
-          <ButtonBoardFirstRowDiv>
-            <ButtonDiv
-              src={clapButton}
-              alt="Boo Button"
-              style={{ width: "70%" }}
-              whileTap={{ scale: 0.8 }}
-            />
-          </ButtonBoardFirstRowDiv>
-        </ButtonBoardDiv>
-      </StyledPageRoot>
-    </PhoneFrame>
+    <StyledPageRoot>
+      <ParentDiv>
+        <BackArrowButton onClick={() => history.push("/")}>
+          <img src={backButton} alt="Back Button" />
+        </BackArrowButton>
+        <StyledFirstRowDiv>
+          <img
+            style={{ width: "100px", height: "auto" }}
+            src={lidomLogo}
+            alt="Lidom Logo"
+          />
+        </StyledFirstRowDiv>
+      </ParentDiv>
+      <ParentDiv>
+        <TeamBox>
+          <LeonesLogo>
+            <img src={leonesLogo} alt="Back Button" />
+            <p
+              style={{
+                color: "#000",
+                fontFamily: "Montserrat",
+                fontWeight: "bold",
+                margin: "0",
+                marginTop: "20px",
+              }}
+            >
+              Leones del Escogido
+            </p>
+          </LeonesLogo>
+          <LogoDiv>
+            <img src={liveIcon} alt="Live Icon" />
+          </LogoDiv>
+          <LogoDiv>
+            <img src={tigresLigo} alt="Tigres Logo" />
+            <p
+              style={{
+                color: "#000",
+                fontFamily: "Montserrat",
+                fontWeight: "bold",
+                margin: "0",
+                marginTop: "20px",
+              }}
+            >
+              Tigres del Licey
+            </p>
+          </LogoDiv>
+        </TeamBox>
+      </ParentDiv>
+      <ParentDiv>
+        <PresidenteLogo>
+          <img src={presidenteLogo} alt="Budweiser Logo" />
+        </PresidenteLogo>
+      </ParentDiv>
+      <ButtonBoardDiv>
+        <ButtonBoardFirstRowDiv>
+          <ButtonDiv
+            src={booButton}
+            alt="Boo Button"
+            whileTap={{ scale: 0.8 }}
+          />
+          <ButtonDiv
+            src={cheerButton}
+            alt="Boo Button"
+            whileTap={{ scale: 0.8 }}
+          />
+        </ButtonBoardFirstRowDiv>
+        <ButtonBoardFirstRowDiv>
+          <ButtonDiv
+            src={letdownButton}
+            alt="Boo Button"
+            whileTap={{ scale: 0.8 }}
+          />
+          <ButtonDiv
+            src={letsgoButton}
+            alt="Boo Button"
+            whileTap={{ scale: 0.8 }}
+          />
+        </ButtonBoardFirstRowDiv>
+        <ButtonBoardFirstRowDiv>
+          <ButtonDiv
+            src={clapButton}
+            alt="Boo Button"
+            style={{ width: "70%" }}
+            whileTap={{ scale: 0.8 }}
+          />
+        </ButtonBoardFirstRowDiv>
+      </ButtonBoardDiv>
+    </StyledPageRoot>
   );
 };
 

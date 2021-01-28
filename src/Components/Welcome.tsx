@@ -13,7 +13,6 @@ import PhoneFrame from "../Components/PhoneFrame";
 
 const StyledPageRoot = styled.div`
   background-color: rgb(198, 13, 13);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +23,9 @@ const StyledPageRoot = styled.div`
   height: 886px;
   width: 428px;
   border-radius: 20px;
-  z-index: 0;
+  @media only screen and (max-width: 600px) {
+    border-radius: 0;
+  }
 `;
 
 const StyledLogoDiv = styled.div`
@@ -72,37 +73,34 @@ const StyledA = styled.a`
 const Welcome = () => {
   const history = useHistory();
   return (
-    <div className="phone-wrapper">
-      <PhoneFrame />
-      <StyledPageRoot>
-        <StyledLogoDiv>
-          <img src={bobbleLogo} alt="Bobble Sports Logo" />
-        </StyledLogoDiv>
-        <StyledSoundSpan>Turn on sound!</StyledSoundSpan>
-        <StyledExplainationText>
-          Your button presses will be combined with reaction from other fans to
-          create a collective crowd audio stream delivered to your device!
-        </StyledExplainationText>
-        <StyledTapFaster>
-          Tap buttons faster for a more intense reaction!
-        </StyledTapFaster>
-        <StyledClapDiv
-          whileTap={{ scale: 0.8 }}
-          onClick={() => history.push("/board")}
-        >
-          <img src={enterButtonImage} alt="Clap" />
-        </StyledClapDiv>
-        <TOSDiv>
-          <StyledA onClick={() => history.push("/privacy")}>
-            Privacy Policy
-          </StyledA>{" "}
-          |{" "}
-          <StyledA target="_blank" rel="noreferrer" href="https://google.com">
-            Terms of Service
-          </StyledA>
-        </TOSDiv>
-      </StyledPageRoot>
-    </div>
+    <StyledPageRoot>
+      <StyledLogoDiv>
+        <img src={bobbleLogo} alt="Bobble Sports Logo" />
+      </StyledLogoDiv>
+      <StyledSoundSpan>Turn on sound!</StyledSoundSpan>
+      <StyledExplainationText>
+        Your button presses will be combined with reaction from other fans to
+        create a collective crowd audio stream delivered to your device!
+      </StyledExplainationText>
+      <StyledTapFaster>
+        Tap buttons faster for a more intense reaction!
+      </StyledTapFaster>
+      <StyledClapDiv
+        whileTap={{ scale: 0.8 }}
+        onClick={() => history.push("/board")}
+      >
+        <img src={enterButtonImage} alt="Clap" />
+      </StyledClapDiv>
+      <TOSDiv>
+        <StyledA onClick={() => history.push("/privacy")}>
+          Privacy Policy
+        </StyledA>{" "}
+        |{" "}
+        <StyledA target="_blank" rel="noreferrer" href="https://google.com">
+          Terms of Service
+        </StyledA>
+      </TOSDiv>
+    </StyledPageRoot>
   );
 };
 

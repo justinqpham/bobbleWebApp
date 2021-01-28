@@ -9,7 +9,6 @@ const StyledRoot = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  z-index: -2;
   position: absolute;
 `;
 
