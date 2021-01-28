@@ -3,15 +3,10 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { withRouter } from "react-router";
 import { useHistory } from "react-router-dom";
-
 import bobbleLogo from "../Static/bobbleSportsLogo.png";
-import bobbleLogoLarge from "../Static/bobbleSportsLogoLarge.png";
-
 import enterButtonImage from "../Static/enterButton.png";
-import enterButtonLarge from "../Static/enterButtonLarge.png";
-import PhoneFrame from "../Components/PhoneFrame";
 
-const StyledPageRoot = styled.div`
+const StyledWelcomePage = styled.div`
   background-color: rgb(198, 13, 13);
   display: flex;
   flex-direction: column;
@@ -40,7 +35,7 @@ const StyledSoundSpan = styled.span`
   margin-top: 101px;
 `;
 
-const StyledExplainationText = styled.p`
+const StyledExplanationText = styled.p`
   font-size: 15px;
   font-weight: lighter;
   margin-top: 109px;
@@ -73,15 +68,15 @@ const StyledA = styled.a`
 const Welcome = () => {
   const history = useHistory();
   return (
-    <StyledPageRoot>
+    <StyledWelcomePage>
       <StyledLogoDiv>
         <img src={bobbleLogo} alt="Bobble Sports Logo" />
       </StyledLogoDiv>
       <StyledSoundSpan>Turn on sound!</StyledSoundSpan>
-      <StyledExplainationText>
+      <StyledExplanationText>
         Your button presses will be combined with reaction from other fans to
         create a collective crowd audio stream delivered to your device!
-      </StyledExplainationText>
+      </StyledExplanationText>
       <StyledTapFaster>
         Tap buttons faster for a more intense reaction!
       </StyledTapFaster>
@@ -92,7 +87,7 @@ const Welcome = () => {
         <img src={enterButtonImage} alt="Clap" />
       </StyledClapDiv>
       <TOSDiv>
-        <StyledA onClick={() => history.push("/privacy")}>
+        <StyledA target="_blank" rel="noreferrer" href="https://google.com">
           Privacy Policy
         </StyledA>{" "}
         |{" "}
@@ -100,7 +95,7 @@ const Welcome = () => {
           Terms of Service
         </StyledA>
       </TOSDiv>
-    </StyledPageRoot>
+    </StyledWelcomePage>
   );
 };
 

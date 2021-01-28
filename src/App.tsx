@@ -3,7 +3,6 @@ import styled from "styled-components";
 import "./App.css";
 import Routes from "./Routes";
 import StyledRoot from "./Components/StyledRoot";
-import StyledPageRoot from "./Components/StyledPageRoot";
 import PhoneFrame from "./Components/PhoneFrame";
 
 const StyledDiv = styled.div``;

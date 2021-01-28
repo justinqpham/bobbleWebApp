@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-// import StyledPageRoot from
 
 import lidomLogo from "../Static/lidomLogo.png";
 import backButton from "../Static/backButton.png";
@@ -17,9 +16,24 @@ import clapButton from "../Static/clapButton.png";
 
 import { withRouter } from "react-router";
 import { useHistory } from "react-router-dom";
-import StyledPageRoot from "./StyledPageRoot";
 import StyledFirstRowDiv from "./StyledFirstRowDiv";
-import PhoneFrame from "./PhoneFrame";
+
+const StyledButtonsPage = styled.div`
+  background-color: rgb(244, 244, 244);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  color: #fff;
+  text-align: center;
+  font-family: "Montserrat";
+  height: 886px;
+  width: 428px;
+  border-radius: 20px;
+  @media only screen and (max-width: 600px) {
+    border-radius: 0;
+  }
+`;
 
 const ButtonDiv = styled(motion.img)`
   height: 90%;
@@ -86,7 +100,7 @@ const Buttons = () => {
   const history = useHistory();
 
   return (
-    <StyledPageRoot>
+    <StyledButtonsPage>
       <ParentDiv>
         <BackArrowButton onClick={() => history.push("/")}>
           <img src={backButton} alt="Back Button" />
@@ -173,7 +187,7 @@ const Buttons = () => {
           />
         </ButtonBoardFirstRowDiv>
       </ButtonBoardDiv>
-    </StyledPageRoot>
+    </StyledButtonsPage>
   );
 };
 

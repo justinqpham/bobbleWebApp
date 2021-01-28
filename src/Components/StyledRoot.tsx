@@ -1,6 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import device from "../Utils/breakpoints";
 
 const StyledRoot = styled.div`
   background-color: #272c35;
