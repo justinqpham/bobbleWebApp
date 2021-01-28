@@ -10,7 +10,6 @@ import bobbleLogoLarge from "../Static/bobbleSportsLogoLarge.png";
 import enterButtonImage from "../Static/enterButton.png";
 import enterButtonLarge from "../Static/enterButtonLarge.png";
 import PhoneFrame from "../Components/PhoneFrame";
-import Phone from "./Phone";
 
 const StyledPageRoot = styled.div`
   background-color: rgb(198, 13, 13);
@@ -25,6 +24,7 @@ const StyledPageRoot = styled.div`
   height: 886px;
   width: 428px;
   border-radius: 20px;
+  z-index: 0;
 `;
 
 const StyledLogoDiv = styled.div`
@@ -72,7 +72,8 @@ const StyledA = styled.a`
 const Welcome = () => {
   const history = useHistory();
   return (
-    <PhoneFrame>
+    <div className="phone-wrapper">
+      <PhoneFrame />
       <StyledPageRoot>
         <StyledLogoDiv>
           <img src={bobbleLogo} alt="Bobble Sports Logo" />
@@ -101,7 +102,7 @@ const Welcome = () => {
           </StyledA>
         </TOSDiv>
       </StyledPageRoot>
-    </PhoneFrame>
+    </div>
   );
 };
 

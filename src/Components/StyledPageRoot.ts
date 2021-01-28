@@ -21,7 +21,7 @@ const StyledPageRoot = styled.div`
 
   @media ${device.desktop} {
     max-width: 900px;
-    max-height: 300px;
+    max-height: 900px;
 `;
 
 export default StyledPageRoot;
