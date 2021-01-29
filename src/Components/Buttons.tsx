@@ -71,7 +71,7 @@ const ParentDiv = styled.div`
 
 const ButtonBoardDiv = styled.div`
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 3.5rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -80,11 +80,11 @@ const TeamBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 0px;
   background: #fff;
-  width: 75%;
+  width: 93%;
   padding: 1rem;
-  border-radius: 12px;
+  border-radius: 30px;
   height: 200px;
 `;
 
@@ -158,7 +158,9 @@ const Buttons = () => {
           <ButtonDiv
             src={booButton}
             alt="Boo Button"
-            whileTap={{ scale: 0.8 }}
+            whileTap={{
+              scale: 0.8,
+            }}
           />
           <ButtonDiv
             src={cheerButton}

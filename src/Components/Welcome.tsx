@@ -37,14 +37,16 @@ const StyledSoundSpan = styled.span`
 
 const StyledExplanationText = styled.p`
   font-size: 15px;
-  font-weight: lighter;
-  margin-top: 109px;
+  font-weight: normal;
+  margin-top: 25px;
 `;
 
 const StyledTapFaster = styled.p`
-  font-size: 15px;
-  font-weight: normal;
-  margin-top: 90px;
+  font-weight: bold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 25px;
 `;
 
 const StyledClapDiv = styled(motion.div)`
@@ -52,12 +54,14 @@ const StyledClapDiv = styled(motion.div)`
   width: 140px;
   border-radius: 50%;
   color: yellow;
-  margin-top: 42px;
+  margin-top: 101px;
 `;
 
 const TOSDiv = styled.div`
   display: flex;
-  margin-top: 50px;
+  font-size: 15px;
+  font-weight: normal;
+  margin-top: 110px;
 `;
 
 const StyledA = styled.a`
@@ -78,7 +82,7 @@ const Welcome = () => {
         create a collective crowd audio stream delivered to your device!
       </StyledExplanationText>
       <StyledTapFaster>
-        Tap buttons faster for a more intense reaction!
+        Tap buttons faster <br></br>for a more intense reaction!
       </StyledTapFaster>
       <StyledClapDiv
         whileTap={{ scale: 0.8 }}
