@@ -5,6 +5,8 @@ import { withRouter } from "react-router";
 import { useHistory } from "react-router-dom";
 import enterButtonImage from "../Static/enterButton.png";
 import bobbleLogoLarge from "../Static/bobbleSportsLogoLarge.png";
+import innerClap from "../Static/innerclapButton.png";
+import outterClap from "../Static/outterclapButton.png";
 
 const StyledWelcomePage = styled.div`
   background-color: rgb(198, 13, 13);
@@ -49,12 +51,23 @@ const StyledTapFaster = styled.p`
   margin-top: 25px;
 `;
 
-const StyledClapDiv = styled(motion.div)`
-  height: 140px;
-  width: 140px;
-  border-radius: 50%;
-  color: yellow;
+const StyledClapDiv = styled.div`
   margin-top: 101px;
+`;
+
+const StyledOutterClapDiv = styled.div`
+  position: relative;
+  // display: flex;
+  // justify-content: center;
+`;
+
+const StyledInnerClapDiv = styled(motion.div)`
+  position: absolute;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  // top: 50px;
+  // left: 50px;
 `;
 
 const TOSDiv = styled.div`
@@ -84,11 +97,16 @@ const Welcome = () => {
       <StyledTapFaster>
         Tap buttons faster <br></br>for a more intense reaction!
       </StyledTapFaster>
-      <StyledClapDiv
-        whileTap={{ scale: 0.8 }}
-        onClick={() => history.push("/board")}
-      >
-        <img src={enterButtonImage} alt="Clap" />
+      <StyledClapDiv>
+        <StyledOutterClapDiv>
+          <img src={outterClap} alt="Clap" width="50%" height="auto" />
+        </StyledOutterClapDiv>
+        <StyledInnerClapDiv
+          whileTap={{ scale: 0.8 }}
+          onClick={() => history.push("/board")}
+        >
+          <img src={innerClap} alt="Clap" width="40%" height="auto" />
+        </StyledInnerClapDiv>
       </StyledClapDiv>
       <TOSDiv>
         <StyledA target="_blank" rel="noreferrer" href="https://google.com">
