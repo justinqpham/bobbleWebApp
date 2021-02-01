@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { withRouter } from "react-router";
 import { useHistory } from "react-router-dom";
-import bobbleLogo from "../Static/bobbleSportsLogo.png";
 import enterButtonImage from "../Static/enterButton.png";
+import bobbleLogoLarge from "../Static/bobbleSportsLogoLarge.png";
 
 const StyledWelcomePage = styled.div`
   background-color: rgb(198, 13, 13);
@@ -74,7 +74,7 @@ const Welcome = () => {
   return (
     <StyledWelcomePage>
       <StyledLogoDiv>
-        <img src={bobbleLogo} alt="Bobble Sports Logo" />
+        <img src={bobbleLogoLarge} alt="Bobble Sports Logo" width="65%" />
       </StyledLogoDiv>
       <StyledSoundSpan>Turn on sound!</StyledSoundSpan>
       <StyledExplanationText>
