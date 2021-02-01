@@ -52,29 +52,28 @@ const StyledTapFaster = styled.p`
 `;
 
 const StyledClapDiv = styled.div`
-  margin-top: 101px;
+  margin-top: 50px;
+  position: relative;
 `;
 
 const StyledOutterClapDiv = styled.div`
   position: relative;
-  // display: flex;
-  // justify-content: center;
 `;
 
 const StyledInnerClapDiv = styled(motion.div)`
   position: absolute;
   display: flex;
-  align-item: center;
+  width: 100%;
   justify-content: center;
-  // top: 50px;
-  // left: 50px;
+  top: 30px;
+  cursor: pointer;
 `;
 
 const TOSDiv = styled.div`
   display: flex;
   font-size: 15px;
   font-weight: normal;
-  margin-top: 110px;
+  margin-top: 90px;
 `;
 
 const StyledA = styled.a`
@@ -102,10 +101,10 @@ const Welcome = () => {
           <img src={outterClap} alt="Clap" width="50%" height="auto" />
         </StyledOutterClapDiv>
         <StyledInnerClapDiv
-          whileTap={{ scale: 0.8 }}
+          whileTap={{ scale: 0.9 }}
           onClick={() => history.push("/board")}
         >
-          <img src={innerClap} alt="Clap" width="40%" height="auto" />
+          <img src={innerClap} alt="Clap" width="35%" height="auto" />
         </StyledInnerClapDiv>
       </StyledClapDiv>
       <TOSDiv>

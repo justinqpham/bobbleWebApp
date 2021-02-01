@@ -38,6 +38,7 @@ const StyledButtonsPage = styled.div`
 const ButtonDiv = styled(motion.img)`
   height: 90%;
   width: 50%;
+  cursor: pointer;
 `;
 
 const PresidenteLogo = styled.div`
@@ -159,25 +160,25 @@ const Buttons = () => {
             src={booButton}
             alt="Boo Button"
             whileTap={{
-              scale: 0.8,
+              scale: 0.9,
             }}
           />
           <ButtonDiv
             src={cheerButton}
             alt="Boo Button"
-            whileTap={{ scale: 0.8 }}
+            whileTap={{ scale: 0.9 }}
           />
         </ButtonBoardFirstRowDiv>
         <ButtonBoardFirstRowDiv>
           <ButtonDiv
             src={letdownButton}
             alt="Boo Button"
-            whileTap={{ scale: 0.8 }}
+            whileTap={{ scale: 0.9 }}
           />
           <ButtonDiv
             src={letsgoButton}
             alt="Boo Button"
-            whileTap={{ scale: 0.8 }}
+            whileTap={{ scale: 0.9 }}
           />
         </ButtonBoardFirstRowDiv>
         <ButtonBoardFirstRowDiv>
@@ -185,7 +186,7 @@ const Buttons = () => {
             src={clapButton}
             alt="Boo Button"
             style={{ width: "70%" }}
-            whileTap={{ scale: 0.8 }}
+            whileTap={{ scale: 0.9 }}
           />
         </ButtonBoardFirstRowDiv>
       </ButtonBoardDiv>
